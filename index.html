@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Example</title>
+  <link href="jquery.mobile.css" media="all" rel="stylesheet" type="text/css" /> 
+	<script type="text/javascript" src="jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="jquery.mobile.js"></script>
+	<script type="text/javascript" src="underscore-min.js"></script>
+	<script type="text/javascript" src="backbone-min.js"></script>
+	<script type="text/javascript" src="json2.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+	<style>
+		div.content {
+			display: none;
+		}
+		div.overlay {
+			display: none;
+			position: relative;
+			width: 130px;
+			height: 160px;
+			margin: auto;
+			overflow: hidden;
+			background: #f6f7f8;
+			box-shadow: 4px 4px 15px #aaa;
+				-webkit-box-shadow: 4px 4px 15px #aaa;
+			border: 1px solid #bcc5cb;
+			border-width: 1px 2px 2px 1px;
+			border-radius: 10px;
+				-webkit-border-radius: 10px 10px 10px 10px;
+			padding: 10px;
+		}
+		div.overlay-title {
+			display: hidden;
+			background-color: #f6f7f8;
+		}
+		div.item-content {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+
+  <div data-role='page'>
+    <header data-role='header'><a href='#' data-icon='gear'>Options</a><h1>RSS Reader</h1></header>
+    <div data-role='content' id=content>
+			<div class=overlay>
+				<div class="overlay-title ui-header ui-bar-a">My Title</div>
+				some stuff
+			</div>
+    </div>
+  </div>
+
+	<script type="text/template" id="item-template">
+		<%= title %>
+		<div class=item-content>
+			<div><%= description %></div>
+			<a href=#>Like</a><a href=#>Mark Unread</a>
+		</div>
+		<a href=#></a>
+	</script>
+
+</body>
+</html>
